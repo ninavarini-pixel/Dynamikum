@@ -488,3 +488,12 @@ html{scroll-padding-top:100px}
  .team-portrait-note{margin-bottom:36px}
 }
 @media(max-width:420px){.team-portrait-strip img{height:155px}}
+
+/* Individual contributor portrait cards */
+.team-night .grid4{align-items:start}
+.team-night .person{min-width:0}
+.team-night .person-photo{margin-bottom:20px;overflow:hidden;background:#303233;aspect-ratio:4/5}
+.team-night .person-photo img{display:block;width:100%;height:100%;object-fit:cover;object-position:center 32%;filter:grayscale(1);transition:transform .5s ease}
+@media(hover:hover) and (prefers-reduced-motion:no-preference){.team-night .person:hover .person-photo img{transform:scale(1.035)}}
+.team-night .person h3{margin-top:0}
+@media(max-width:760px){.team-night .person-photo{margin-bottom:14px}}
