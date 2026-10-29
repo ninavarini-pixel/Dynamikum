@@ -584,3 +584,13 @@ html{scroll-padding-top:100px}
 .site-header{position:sticky;top:0;z-index:1000;background:#fff}
 html{scroll-padding-top:85px}
 @media(max-width:900px){html{scroll-padding-top:76px}}
+
+
+/* Language navigation: quiet segmented control matching the editorial header */
+.language-control{display:inline-flex;align-items:center;flex:none;border:1px solid var(--line);border-radius:3px;padding:3px;gap:1px;background:#f8f8f8;white-space:nowrap}
+.language-control a{display:flex;align-items:center;justify-content:center;min-width:33px;height:29px;padding:0 6px;color:#777;font-size:10px;font-weight:600;letter-spacing:.055em;line-height:1;border-radius:2px;transition:background .2s,color .2s}
+.language-control a:hover{color:var(--ink);background:#e9e9e9}
+.language-control a.is-active{background:var(--ink);color:#fff}
+.language-control a:focus-visible{outline:2px solid #555;outline-offset:3px}
+@media(max-width:1050px){.site-header{gap:14px}.language-control{margin-left:auto}}
+@media(max-width:760px){.language-control{order:0;margin-left:auto}.language-control a{min-width:29px;height:27px;padding:0 4px}.site-header>.btn{display:none}}
