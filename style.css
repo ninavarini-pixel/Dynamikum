@@ -737,3 +737,20 @@ html:lang(sk) p,html:lang(sk) .body{hyphens:auto}
 .field .select-chevron{position:absolute;pointer-events:none;right:22px;top:50%;width:10px;height:10px;border-right:1.7px solid #222;border-bottom:1.7px solid #222;transform:translateY(-68%) rotate(45deg);transition:transform .2s ease}
 .field .select-shell:focus-within .select-chevron{transform:translateY(-24%) rotate(225deg)}
 @media(max-width:900px){.field .select-shell select{min-height:58px;padding:16px 56px 16px 18px}.field .select-chevron{right:21px}}
+
+
+/* Contact form: premium editorial treatment */
+.contact-form-section{padding-top:clamp(42px,7vw,96px)}
+.contact-form-section .inquiry{max-width:760px;margin-inline:auto}
+#inquiry-form{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));column-gap:24px;row-gap:22px}
+#inquiry-form .field{margin:0;gap:11px;min-width:0}
+#inquiry-form .field:first-child,#inquiry-form .field:nth-child(4),#inquiry-form .notice{grid-column:1/-1}
+#inquiry-form .field label{font-size:12px;font-weight:600;letter-spacing:.02em;color:#333}
+#inquiry-form .field input,#inquiry-form .field textarea{min-height:58px;padding:17px 19px;border:1px solid #d5d5d5;border-radius:8px;background:#fff;color:#171717;font:inherit;font-size:16px;line-height:1.5;transition:border-color .2s,box-shadow .2s,background .2s}
+#inquiry-form .field textarea{min-height:180px;resize:vertical}
+#inquiry-form .field input:hover,#inquiry-form .field textarea:hover{border-color:#999}
+#inquiry-form .field input:focus,#inquiry-form .field textarea:focus{outline:2px solid #222;outline-offset:2px;border-color:#222}
+#inquiry-form .btn[type=submit]{grid-column:1/-1;justify-self:start;min-height:58px;min-width:220px;border-radius:6px;padding:17px 28px;font-size:14px;font-weight:600;letter-spacing:.015em}
+#inquiry-form .notice{margin:0;max-width:64ch;color:#777;font-size:12px;line-height:1.75}
+#inquiry-form .select-shell select{border-radius:8px}
+@media(max-width:700px){#inquiry-form{grid-template-columns:minmax(0,1fr);row-gap:23px}#inquiry-form .field{grid-column:1/-1}#inquiry-form .btn[type=submit]{width:100%;justify-self:stretch}#inquiry-form .field textarea{min-height:160px}.contact-form-section{padding-top:36px}}
