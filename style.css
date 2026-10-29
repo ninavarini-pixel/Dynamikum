@@ -497,3 +497,57 @@ html{scroll-padding-top:100px}
 @media(hover:hover) and (prefers-reduced-motion:no-preference){.team-night .person:hover .person-photo img{transform:scale(1.035)}}
 .team-night .person h3{margin-top:0}
 @media(max-width:760px){.team-night .person-photo{margin-bottom:14px}}
+
+/* DYNAMIKUM editorial design system / 2026 refinement */
+:root{--editorial-black:#17191a;--editorial-paper:#f6f6f3;--editorial-rule:#dfdfda}
+::selection{background:#222;color:#fff}
+:focus-visible{outline:2px solid #7a817d;outline-offset:4px}
+.site-header{position:relative;z-index:20}
+.brand{letter-spacing:.125em}
+.nav a{transition:color .2s ease}
+.display,.heading{letter-spacing:-.058em;text-wrap:balance}
+.hero{position:relative;isolation:isolate}
+.hero-copy{position:relative}
+.hero-copy .eyebrow{font-weight:600;letter-spacing:.12em;text-transform:uppercase}
+.hero-copy .display{font-size:clamp(52px,5.8vw,94px);line-height:1.015;max-width:700px}
+.hero-copy .body{font-size:clamp(14px,1.08vw,16px);line-height:1.85}
+.hero-copy .actions{margin-top:34px}
+.hero-copy .actions .btn{gap:30px;padding:16px 23px}
+.hero-copy-index{position:absolute;bottom:28px;left:15.6%;font-size:9px;font-weight:500;letter-spacing:.16em;color:#969696}
+.hero-visual{position:relative;background:#f0f0ed}
+.hero-visual img{transition:transform 1.1s cubic-bezier(.2,.7,.2,1)}
+.hero-visual-index,.hero-visual-caption{position:absolute;z-index:2;font-size:9px;font-weight:600;letter-spacing:.15em;color:#5e605f;pointer-events:none}
+.hero-visual-index{top:28px;left:30px}
+.hero-visual-caption{bottom:26px;left:30px;right:30px;display:flex;justify-content:space-between;gap:16px}
+.hero-visual-caption span{color:#8b8e8b}
+.home-discover{padding-top:clamp(100px,10vw,155px);padding-bottom:clamp(100px,10vw,155px)}
+.home-discover .section-head{border-top:1px solid var(--editorial-rule);padding-top:22px}
+.home-discover .section-head::before{content:"01 / DISCOVER";font-size:10px;letter-spacing:.15em;font-weight:600;color:#777;position:absolute;margin-top:-43px}
+.home-discover .image-pair{gap:clamp(16px,2.5vw,36px)}
+.home-discover .image-pair a{display:block;min-width:0}
+.home-discover .image-pair img{height:clamp(300px,31vw,510px);background:#f1f1ee;transition:transform .65s cubic-bezier(.2,.7,.2,1),filter .4s ease}
+.home-discover .image-pair h3{font-size:clamp(20px,2vw,28px);letter-spacing:-.045em;margin-top:25px}
+.home-discover .image-pair a h3::after{content:"↗";font-size:16px;float:right;margin-top:5px;font-weight:400}
+.home-discover .image-pair p{line-height:1.85;max-width:360px}
+.home-finale{position:relative}
+.home-finale::before{content:"02 / NEXT STEPS";display:block;font-size:10px;letter-spacing:.15em;font-weight:600;color:#aeb0ae;margin-bottom:34px}
+.section--night .heading{letter-spacing:-.06em}
+.section-head .heading{max-width:900px}
+.wide-visual img,.story-image img{transition:transform .7s ease}
+.person-photo img{filter:grayscale(1)}
+@media(hover:hover) and (prefers-reduced-motion:no-preference){
+ .hero-visual:hover img{transform:scale(1.025)}
+ .home-discover .image-pair a:hover img{transform:scale(1.025)}
+}
+@media(max-width:1050px){.hero-copy-index{left:12%}}
+@media(max-width:760px){
+ .hero-copy .display{font-size:clamp(48px,10vw,74px)}
+ .hero-copy-index{position:static;margin-top:50px;font-size:8px}
+ .hero-visual-index{top:16px;left:18px}
+ .hero-visual-caption{bottom:16px;left:18px;right:18px;font-size:8px}
+ .home-discover{padding-top:90px;padding-bottom:90px}
+ .home-discover .section-head::before{margin-top:-39px}
+ .home-discover .image-pair img{height:300px}
+ .home-discover .image-pair h3{margin-top:18px}
+}
+@media(prefers-reduced-motion:reduce){.hero-visual img,.home-discover .image-pair img{transition:none!important}}
