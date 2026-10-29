@@ -219,37 +219,76 @@ body{font-size:14px;line-height:1.7}
 @media(max-width:760px){.vehicle-story .vehicle-intro .display{font-size:clamp(46px,9vw,68px)}.vehicle-opening img{height:330px}.vehicle-opening figcaption{padding:12px 6%;font-size:9px}.vehicle-opening figcaption span{max-width:145px;text-align:right}.story-chapter{grid-template-columns:1fr;gap:24px;padding-top:85px;padding-bottom:85px}.story-content .heading{font-size:clamp(41px,8.5vw,60px);margin:18px 0 27px}.story-content>.body{font-size:14px}.vehicle-editorial-pair{grid-template-columns:1fr;gap:30px;padding:0 6%}.vehicle-editorial-pair img{height:330px}.story-detail{margin-top:48px}.story-detail img{height:270px}.story-engineering .section-head{margin-bottom:30px}.story-cutaway img{height:310px}.story-rules{margin-top:55px}.story-details .detail-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.story-details .detail-grid img{height:190px}.story-outro{margin-top:80px;padding-top:75px}}
 @media(max-width:390px){.story-details .detail-grid{grid-template-columns:1fr}.story-details .detail-grid img{height:270px}.vehicle-opening img{height:280px}}
 
-/* Vehicle typography: coherent editorial rhythm and alignment */
-.vehicle-story{--v-space-1:12px;--v-space-2:24px;--v-space-3:40px;--v-space-4:72px;--v-space-5:112px}
-.vehicle-story .eyebrow{font-size:10px;line-height:1.5;letter-spacing:.11em}
-.vehicle-story .display,.vehicle-story .heading,.vehicle-story h3{text-wrap:balance}
-.vehicle-story .body{font-size:15px;line-height:1.72;letter-spacing:-.008em;max-width:48ch}
-.vehicle-story .body:last-child{margin-bottom:0}
-.vehicle-story .vehicle-intro{display:grid;grid-template-columns:minmax(0,1.55fr) minmax(250px,.7fr);align-items:end;gap:clamp(40px,5vw,90px);padding-top:clamp(95px,8vw,135px);padding-bottom:clamp(72px,7vw,108px)}
-.vehicle-story .vehicle-intro .display{font-size:clamp(48px,5.4vw,80px);line-height:1.065;letter-spacing:-.058em;margin:18px 0 0;max-width:15ch}
-.vehicle-story .vehicle-intro .body{max-width:36ch;margin:0 0 7px;justify-self:end}
-.vehicle-story .section{padding-top:clamp(85px,8vw,124px);padding-bottom:clamp(85px,8vw,124px)}
+
+/* DYNAMIKUM DESIGN SYSTEM — one typographic hierarchy across every page.
+   Layouts and storytelling stay page-specific; type, spacing and controls do not. */
+:root{
+ --type-display:clamp(48px,5.4vw,80px);
+ --type-heading:clamp(39px,4.5vw,64px);
+ --type-subheading:clamp(24px,2.6vw,36px);
+ --type-card:clamp(20px,2vw,27px);
+ --type-body:14px;
+ --type-small:12px;
+ --type-label:10px;
+ --rhythm-section:clamp(85px,8vw,125px);
+ --rhythm-title:18px;
+ --rhythm-copy:26px;
+ --rhythm-block:clamp(38px,4vw,60px);
+}
+body{font-size:var(--type-body);line-height:1.75}
+.display,.heading,.subheading,h3{text-wrap:balance;font-weight:400}
+.display{font-size:var(--type-display);line-height:1.07;letter-spacing:-.058em;margin:var(--rhythm-title) 0 var(--rhythm-copy)}
+.heading{font-size:var(--type-heading);line-height:1.1;letter-spacing:-.052em;margin:var(--rhythm-title) 0 var(--rhythm-copy)}
+.subheading{font-size:var(--type-subheading);line-height:1.2;letter-spacing:-.04em}
+.eyebrow{font-size:var(--type-label);font-weight:500;letter-spacing:.11em;line-height:1.5;text-transform:uppercase;color:#767676}
+.body{font-size:var(--type-body);line-height:1.78;letter-spacing:0;max-width:52ch;color:var(--muted)}
+.fine,.notice{font-size:var(--type-small);line-height:1.75}
+.section{padding-top:var(--rhythm-section);padding-bottom:var(--rhythm-section)}
+.section-head{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(250px,.75fr);gap:clamp(32px,5vw,85px);align-items:end;margin-bottom:var(--rhythm-block)}
+.section-head>div{min-width:0}
+.section-head .heading{margin:var(--rhythm-title) 0 0;max-width:17ch}
+.section-head>.body{justify-self:end;align-self:end;max-width:42ch;margin:0 0 5px}
+.intro .display{margin:var(--rhythm-title) 0 0}
+.intro .body{margin:0 0 5px;max-width:43ch}
+.hero-copy .display{margin:var(--rhythm-title) 0 var(--rhythm-copy)}
+.hero-copy .body{max-width:43ch}
+.btn,.text-link,.nav a,.footer nav a{font-size:var(--type-small);font-weight:500}
+.detail-grid figcaption,.vehicle-editorial-pair figcaption,.vehicle-opening figcaption,.story-cutaway figcaption{font-size:11px;line-height:1.55;letter-spacing:.015em}
+.image-pair h3,.rule-row h3,.job h3{font-size:var(--type-card);line-height:1.24;letter-spacing:-.035em}
+.image-pair p,.rule-row p,.job p{font-size:var(--type-body);line-height:1.75}
+.stat strong{font-size:clamp(29px,3vw,38px);line-height:1.15;letter-spacing:-.045em}
+.stat span{font-size:var(--type-small)}
+.contact-card h3,.role-overview h3{font-size:var(--type-subheading);line-height:1.2;letter-spacing:-.04em}
+.contact-card p,.role-overview p,.person p{font-size:var(--type-body);line-height:1.75}
+.field label{font-size:var(--type-small)}
+/* Vehicle layout stays bespoke; its text follows the exact same tokens above. */
+.vehicle-story .vehicle-intro{padding-top:clamp(95px,8vw,135px);padding-bottom:clamp(72px,7vw,108px)}
+.vehicle-story .vehicle-intro .display{max-width:15ch}
 .vehicle-story .story-chapter{grid-template-columns:minmax(110px,.24fr) minmax(0,1fr);column-gap:clamp(35px,6vw,100px)}
-.vehicle-story .story-number{font-size:11px;line-height:1.6;padding-top:5px}
 .vehicle-story .story-content{max-width:760px}
-.vehicle-story .story-content .heading{font-size:clamp(44px,4.8vw,72px);line-height:1.09;letter-spacing:-.055em;margin:17px 0 31px;max-width:16ch}
-.vehicle-story .story-content>.body{max-width:53ch;font-size:15px;line-height:1.75;margin:0 0 17px}
+.vehicle-story .story-content .heading{font-size:var(--type-heading);line-height:1.1;letter-spacing:-.052em;margin:var(--rhythm-title) 0 var(--rhythm-copy);max-width:17ch}
+.vehicle-story .story-content>.body{font-size:var(--type-body);line-height:1.78;max-width:52ch;margin:0 0 17px}
 .vehicle-story .story-content>.body:last-of-type{margin-bottom:0}
-.vehicle-story .section-head{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(250px,.75fr);gap:clamp(35px,6vw,100px);align-items:end;margin-bottom:clamp(38px,4vw,60px)}
-.vehicle-story .section-head>div{min-width:0}
-.vehicle-story .section-head .heading{font-size:clamp(42px,4.65vw,68px);line-height:1.1;letter-spacing:-.055em;max-width:16ch;margin:17px 0 0}
-.vehicle-story .section-head>.body{max-width:39ch;justify-self:end;margin:0 0 5px}
-.vehicle-story .story-detail{margin-top:clamp(48px,5vw,72px);gap:clamp(30px,5vw,70px)}
-.vehicle-story .story-detail h3{font-size:clamp(27px,2.6vw,37px);line-height:1.15;letter-spacing:-.045em;margin:12px 0 17px}
-.vehicle-story .story-detail .body{font-size:14px;max-width:37ch}
-.vehicle-story .story-rules{margin-top:clamp(55px,6vw,85px)}
-.vehicle-story .rule-row{grid-template-columns:minmax(200px,.75fr) minmax(0,1fr);gap:clamp(30px,5vw,85px);padding:27px 0}
-.vehicle-story .rule-row h3{font-size:clamp(21px,2vw,27px);line-height:1.25;letter-spacing:-.035em}
-.vehicle-story .rule-row p{font-size:14px;line-height:1.75;max-width:51ch}
-.vehicle-story .story-specs .stats{margin-top:clamp(35px,4vw,55px)}
-.vehicle-story .story-outro{margin-top:clamp(75px,7vw,105px);padding-top:clamp(70px,7vw,105px);align-items:end}
-.vehicle-story .story-outro .heading{font-size:clamp(43px,4.8vw,68px);line-height:1.1;margin:16px 0 23px}
-.vehicle-story .story-outro .body{max-width:46ch}
-.vehicle-story .story-outro .actions{flex-shrink:0}
-@media(max-width:900px){.vehicle-story .vehicle-intro{grid-template-columns:minmax(0,1fr) minmax(220px,.8fr);gap:30px}.vehicle-story .story-chapter{grid-template-columns:95px minmax(0,1fr);gap:30px}.vehicle-story .section-head{grid-template-columns:minmax(0,1fr) minmax(220px,.85fr);gap:30px}.vehicle-story .story-outro .actions{margin-top:32px}}
-@media(max-width:760px){.vehicle-story .vehicle-intro{grid-template-columns:1fr;gap:25px;padding-top:70px;padding-bottom:52px}.vehicle-story .vehicle-intro .display{font-size:clamp(43px,9vw,62px);max-width:14ch}.vehicle-story .vehicle-intro .body{justify-self:start;max-width:44ch;margin:0}.vehicle-story .section{padding-top:75px;padding-bottom:75px}.vehicle-story .story-chapter{grid-template-columns:1fr;gap:23px}.vehicle-story .story-content .heading{font-size:clamp(40px,8.4vw,56px);margin:13px 0 24px}.vehicle-story .section-head{grid-template-columns:1fr;gap:18px;margin-bottom:33px}.vehicle-story .section-head .heading{font-size:clamp(39px,8.1vw,54px);margin:13px 0 0}.vehicle-story .section-head>.body{justify-self:start;margin:0;max-width:48ch}.vehicle-story .body,.vehicle-story .story-content>.body{font-size:14px;line-height:1.75}.vehicle-story .story-detail{margin-top:44px}.vehicle-story .story-rules{margin-top:48px}.vehicle-story .rule-row{grid-template-columns:1fr;gap:9px;padding:24px 0}.vehicle-story .story-outro{margin-top:70px;padding-top:70px}.vehicle-story .story-outro .heading{font-size:clamp(40px,8.3vw,54px)}}
+.vehicle-story .story-number{font-size:var(--type-small);line-height:1.5}
+.vehicle-story .section-head .heading{font-size:var(--type-heading);line-height:1.1;letter-spacing:-.052em;margin:var(--rhythm-title) 0 0}
+.vehicle-story .section-head>.body{font-size:var(--type-body);line-height:1.78;max-width:42ch}
+.vehicle-story .story-detail h3{font-size:var(--type-subheading);line-height:1.2;letter-spacing:-.04em;margin:var(--rhythm-title) 0 17px}
+.vehicle-story .story-detail .body{font-size:var(--type-body);line-height:1.78}
+.vehicle-story .rule-row h3{font-size:var(--type-card);line-height:1.24;letter-spacing:-.035em}
+.vehicle-story .rule-row p{font-size:var(--type-body);line-height:1.75}
+.vehicle-story .story-outro .heading{font-size:var(--type-heading);line-height:1.1;letter-spacing:-.052em;margin:var(--rhythm-title) 0 var(--rhythm-copy)}
+.vehicle-story .story-outro .body{font-size:var(--type-body);line-height:1.78}
+@media(max-width:900px){.vehicle-story .story-chapter{grid-template-columns:95px minmax(0,1fr);gap:30px}}
+@media(max-width:760px){
+ :root{--type-display:clamp(43px,9vw,62px);--type-heading:clamp(37px,8vw,52px);--type-subheading:clamp(23px,5vw,31px);--type-card:21px;--rhythm-section:75px;--rhythm-title:14px;--rhythm-copy:23px;--rhythm-block:33px}
+ .section{padding-top:var(--rhythm-section);padding-bottom:var(--rhythm-section)}
+ .section-head{grid-template-columns:1fr;gap:18px;margin-bottom:var(--rhythm-block)}
+ .section-head>.body{justify-self:start;margin:0;max-width:52ch}
+ .intro .body{margin:0}
+ .vehicle-story .vehicle-intro{padding-top:70px;padding-bottom:52px}
+ .vehicle-story .story-chapter{grid-template-columns:1fr;gap:23px;padding-top:var(--rhythm-section);padding-bottom:var(--rhythm-section)}
+ .vehicle-story .story-content .heading{margin:var(--rhythm-title) 0 var(--rhythm-copy)}
+ .vehicle-story .story-content>.body{font-size:var(--type-body)}
+ .vehicle-story .story-detail h3{margin:var(--rhythm-title) 0 17px}
+ .vehicle-story .story-outro .heading{font-size:var(--type-heading)}
+}
