@@ -772,3 +772,7 @@ html:lang(sk) p,html:lang(sk) .body{hyphens:auto}
 #inquiry-form .topic-option:hover,#inquiry-form .topic-option:focus-visible{background:#f2f2f0;outline:none}
 #inquiry-form .topic-option.is-selected{background:#ededeb;font-weight:600}
 @media(max-width:700px){#inquiry-form .topic-trigger{min-height:58px;padding-inline:18px}#inquiry-form .topic-option{min-height:50px}}
+
+
+/* Global typography: never automatically hyphenate words in any language */
+html,body,body *{hyphens:none!important;-webkit-hyphens:none!important;-ms-hyphens:none!important}
