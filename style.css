@@ -445,3 +445,28 @@ html{scroll-padding-top:100px}
  .story-engineering--dark .story-cutaway figcaption{padding-top:13px}
  .story-engineering--dark .story-rules{margin-top:44px}
 }
+
+/* Selective dark chapters: overview invitation and partnerships */
+.section--night{background:#17191a!important;color:#f4f3ef}
+.section--night .heading,.section--night h3{color:#f4f3ef}
+.section--night .body,.section--night .rule-row p{color:#bfc1c0}
+.section--night .body strong,.section--night .rule-row p strong{color:#fff}
+.section--night .eyebrow{color:#b0b2b2}
+.section--night .rule-list{border-top-color:#46494a}
+.section--night .rule-row{border-bottom-color:#46494a}
+.section--night .btn{background:#f4f3ef;border-color:#f4f3ef;color:#17191a}
+.section--night .btn.outline{background:transparent;color:#f4f3ef;border-color:#737777}
+@media(hover:hover){
+ .section--night .btn:hover{background:#d7d8d4;border-color:#d7d8d4;color:#17191a}
+ .section--night .btn.outline:hover{background:#f4f3ef;border-color:#f4f3ef;color:#17191a}
+ .section--night .rule-row:hover{background:rgba(255,255,255,.035)}
+}
+.home-finale{padding-top:clamp(100px,11vw,175px);padding-bottom:clamp(100px,11vw,175px)}
+.home-finale .section-head{margin-bottom:22px}
+.partnerships-finale{padding-bottom:clamp(105px,10vw,155px)}
+@media(max-width:760px){
+ .home-finale{padding-top:85px;padding-bottom:90px}
+ .home-finale .actions{gap:12px}
+ .home-finale .actions .btn{min-height:48px}
+ .partnerships-finale{padding-top:80px;padding-bottom:95px}
+}
