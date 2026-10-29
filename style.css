@@ -407,3 +407,23 @@ html{scroll-padding-top:100px}
  .site-header .mobile-contact-link{display:flex!important}
 }
 @media(max-width:420px){.site-header{grid-template-columns:minmax(0,1fr) 42px}}
+
+/* Editorial lift — selective emphasis, tactile interactions, no extra clutter */
+.body strong,.rule-row p strong,.image-pair p strong{font-weight:600;color:var(--ink);letter-spacing:-.012em}
+.body strong{box-decoration-break:clone;-webkit-box-decoration-break:clone}
+.hero-copy .eyebrow,.intro .eyebrow{display:inline-flex;align-items:center;gap:12px}
+.hero-copy .eyebrow::before,.intro .eyebrow::before{content:"";display:block;width:21px;height:1px;background:#1c1c1c;flex:none}
+.btn{transition:background .22s ease,color .22s ease,border-color .22s ease,transform .22s ease}
+@media(hover:hover) and (prefers-reduced-motion:no-preference){
+ .actions .btn:hover,.contact-form-section .btn:hover{transform:translateY(-2px)}
+ .image-pair a img{transition:transform .55s cubic-bezier(.2,.7,.2,1),filter .3s ease}
+ .image-pair a:hover img{transform:scale(1.012)}
+ .image-pair a h3{transition:color .2s ease}
+ .image-pair a:hover h3{color:#666}
+}
+.rule-row{transition:background .2s ease}
+@media(hover:hover){.rule-row:hover{background:rgba(0,0,0,.012)}}
+@media(max-width:760px){
+ .hero-copy .eyebrow::before,.intro .eyebrow::before{width:16px}
+ .body strong{font-weight:600}
+}
