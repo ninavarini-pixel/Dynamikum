@@ -179,3 +179,42 @@ body{font-size:14px;line-height:1.7}
 @media(min-width:1200px){.section-head{grid-template-columns:minmax(0,650px) minmax(0,360px);justify-content:space-between}}
 @media(max-width:1050px){.site-header{display:grid;grid-template-columns:1fr auto;gap:12px 20px}.nav{grid-column:1/-1;grid-row:2;order:initial;display:flex;width:100%;padding:5px 0 9px;overflow-x:auto;scrollbar-width:none}.nav::-webkit-scrollbar{display:none}.site-header>.btn{grid-column:2;grid-row:1;justify-self:end}.brand{grid-column:1;grid-row:1}.section-head{grid-template-columns:minmax(0,1fr) minmax(230px,.75fr)}}
 @media(max-width:760px){.site-header{padding:15px 6% 5px;gap:9px 15px}.nav{gap:24px;padding-bottom:12px}.nav a{font-size:11px}.site-header>.btn{padding:6px 0}.section{padding:77px 6%}.section-head{grid-template-columns:1fr;gap:16px;margin-bottom:34px}.section-head>.body{margin:0;max-width:480px}.intro{padding:78px 6% 45px}.intro .body{margin:0}.image-pair{gap:36px}.image-pair h3{margin-top:17px}.rule-row{padding:26px 0}.footer-top{margin-bottom:35px}.footer-bottom{gap:8px}}
+
+/* Vehicle narrative / bespoke editorial chapters */
+.vehicle-story .vehicle-intro{padding-bottom:clamp(65px,6vw,100px)}
+.vehicle-story .vehicle-intro .display{font-size:clamp(52px,5.9vw,94px);max-width:950px;line-height:1.035}
+.vehicle-story .vehicle-intro .body{max-width:380px}
+.vehicle-opening{margin:0;position:relative;background:#f7f7f7}
+.vehicle-opening img{display:block;width:100%;height:clamp(370px,52vw,720px);object-fit:cover;object-position:center}
+.vehicle-opening figcaption{display:flex;justify-content:space-between;gap:20px;padding:15px clamp(28px,7vw,124px);font-size:10px;color:#777;letter-spacing:.035em;border-bottom:1px solid var(--line);background:#fff}
+.story-chapter{display:grid;grid-template-columns:minmax(120px,.28fr) minmax(0,1fr);column-gap:clamp(45px,8vw,160px);padding-top:clamp(105px,10vw,175px);padding-bottom:clamp(105px,10vw,175px)}
+.story-number{font-size:12px;font-weight:500;color:#202020;white-space:nowrap;padding-top:7px}
+.story-number span{color:#888;font-weight:400;margin-left:10px}
+.story-content{max-width:900px}
+.story-content .heading{font-size:clamp(47px,5.5vw,83px);margin:20px 0 42px}
+.story-content>.body{max-width:530px;font-size:15px;line-height:1.85;margin-bottom:18px}
+.vehicle-editorial-pair{display:grid;grid-template-columns:1.3fr .7fr;gap:clamp(12px,2vw,30px);padding:0 clamp(28px,7vw,124px)}
+.vehicle-editorial-pair figure{margin:0;min-width:0}
+.vehicle-editorial-pair img{width:100%;height:clamp(310px,38vw,580px);object-fit:cover}
+.vehicle-editorial-pair figcaption{font-size:10px;color:#777;padding-top:13px;letter-spacing:.03em}
+.story-chapter--border{border-bottom:1px solid var(--line)}
+.story-detail{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,.8fr);align-items:center;gap:clamp(35px,5vw,85px);margin-top:75px}
+.story-detail img{width:100%;height:clamp(260px,28vw,410px);object-fit:cover}
+.story-detail h3{font-size:clamp(26px,3vw,42px);letter-spacing:-.05em;margin:14px 0 18px}
+.story-detail .body{max-width:320px}
+.story-engineering .section-head{margin-bottom:55px}
+.story-cutaway{margin:0}
+.story-cutaway img{width:100%;height:clamp(370px,45vw,630px);object-fit:cover}
+.story-cutaway figcaption{padding:13px 0 0;color:#888;font-size:11px}
+.story-rules{margin-top:clamp(65px,7vw,115px)}
+.story-details .detail-grid{grid-template-columns:repeat(4,minmax(0,1fr))}
+.story-details .detail-grid img{height:clamp(180px,19vw,285px)}
+.story-specs{border-top:1px solid var(--line)}
+.story-specs .stats{margin-top:30px}
+.story-outro{display:flex;justify-content:space-between;align-items:end;gap:45px;border-top:1px solid var(--line);padding-top:clamp(80px,8vw,135px);margin-top:clamp(85px,9vw,150px)}
+.story-outro .heading{font-size:clamp(44px,5vw,76px);margin:16px 0 25px}
+.story-outro .body{max-width:430px}
+.story-outro .actions{margin-bottom:10px}
+@media(max-width:900px){.story-chapter{grid-template-columns:100px 1fr;gap:35px}.vehicle-editorial-pair{grid-template-columns:1fr 1fr}.story-detail{grid-template-columns:1fr;gap:30px}.story-detail img{max-width:580px}.story-outro{display:block}.story-outro .actions{margin-top:30px}}
+@media(max-width:760px){.vehicle-story .vehicle-intro .display{font-size:clamp(46px,9vw,68px)}.vehicle-opening img{height:330px}.vehicle-opening figcaption{padding:12px 6%;font-size:9px}.vehicle-opening figcaption span{max-width:145px;text-align:right}.story-chapter{grid-template-columns:1fr;gap:24px;padding-top:85px;padding-bottom:85px}.story-content .heading{font-size:clamp(41px,8.5vw,60px);margin:18px 0 27px}.story-content>.body{font-size:14px}.vehicle-editorial-pair{grid-template-columns:1fr;gap:30px;padding:0 6%}.vehicle-editorial-pair img{height:330px}.story-detail{margin-top:48px}.story-detail img{height:270px}.story-engineering .section-head{margin-bottom:30px}.story-cutaway img{height:310px}.story-rules{margin-top:55px}.story-details .detail-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.story-details .detail-grid img{height:190px}.story-outro{margin-top:80px;padding-top:75px}}
+@media(max-width:390px){.story-details .detail-grid{grid-template-columns:1fr}.story-details .detail-grid img{height:270px}.vehicle-opening img{height:280px}}
