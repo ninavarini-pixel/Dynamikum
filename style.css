@@ -657,3 +657,49 @@ html{scroll-padding-top:85px}
  .section-head .heading{font-size:clamp(32px,8.5vw,39px)}
  .detail-grid,.grid4{grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:10px}
 }
+
+
+/* Mobile editorial cleanup: remove ornamental arrows, increase whitespace */
+@media(max-width:900px){
+ .site-header{padding-top:12px;padding-bottom:12px}
+ .site-header .nav{margin-top:12px;padding-top:8px}
+ .site-header .nav a{min-height:60px;padding-block:17px}
+ .hero-copy{padding-top:clamp(68px,15vw,100px);padding-bottom:clamp(55px,11vw,78px)}
+ .hero-copy .eyebrow{margin-bottom:12px}
+ .hero-copy .display{margin-top:16px;margin-bottom:30px;line-height:1.1}
+ .hero-copy .body{line-height:1.9}
+ .hero-copy .actions{margin-top:36px}
+ .hero-copy .actions .btn{gap:0}
+ .hero-copy .actions .btn span[aria-hidden="true"]{display:none}
+ .hero-copy-index{margin-top:46px}
+ .section{padding-top:clamp(90px,18vw,132px);padding-bottom:clamp(90px,18vw,132px)}
+ .section-head{gap:24px;margin-bottom:46px}
+ .section-head .heading{line-height:1.14}
+ .section-head>.body{line-height:1.9}
+ .intro{padding-top:90px;padding-bottom:60px;gap:26px}
+ .image-pair{gap:64px}
+ .image-pair h3{margin-top:26px;margin-bottom:12px}
+ .image-pair p{line-height:1.9}
+ .home-discover{padding-top:110px;padding-bottom:110px}
+ .home-discover .section-head{margin-bottom:48px}
+ .home-discover .image-pair{gap:66px}
+ .home-discover .image-pair a h3::after{content:none!important;display:none!important}
+ .home-discover .image-pair h3{display:block}
+ .home-finale::before{margin-bottom:44px}
+ .rule-row{padding-block:34px;gap:16px}
+ .role-overview{padding-block:36px;gap:22px}
+ .role-details{padding-bottom:48px}
+ .role-columns{gap:34px}
+ .stats .stat{padding-block:28px}
+ .actions{margin-top:36px;gap:14px}
+ .actions .btn{padding-block:16px;line-height:1.5}
+ .footer{padding-top:72px}
+ .footer-top{margin-bottom:44px}
+ .footer nav{row-gap:18px}
+ .hero-visual-index,.hero-visual-caption{letter-spacing:.09em}
+}
+@media(max-width:420px){
+ .hero-copy{padding-top:68px;padding-bottom:58px}
+ .home-discover .image-pair{gap:56px}
+ .section{padding-top:86px;padding-bottom:86px}
+}
