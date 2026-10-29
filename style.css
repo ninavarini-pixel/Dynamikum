@@ -594,3 +594,8 @@ html{scroll-padding-top:85px}
 .language-control a:focus-visible{outline:2px solid #555;outline-offset:3px}
 @media(max-width:1050px){.site-header{gap:14px}.language-control{margin-left:auto}}
 @media(max-width:760px){.language-control{order:0;margin-left:auto}.language-control a{min-width:29px;height:27px;padding:0 4px}.site-header>.btn{display:none}}
+
+/* Contact is a standard nav item; language control occupies the far edge */
+.site-header .nav{margin-left:auto}.site-header .language-control{margin-left:12px}.site-header .nav a[href="/contact.html"]{display:inline-flex}
+@media(max-width:1050px){.site-header .nav{margin-left:0}.site-header .language-control{margin-left:auto}}
+@media(max-width:760px){.site-header .language-control{margin-left:auto;order:2}.site-header .nav{order:3}.site-header .nav a[href="/contact.html"]{display:inline-flex}}
