@@ -717,3 +717,13 @@ html{scroll-padding-top:85px}
  .story-cutaway img,.story-engineering--dark .story-cutaway img{width:100%;height:clamp(280px,78vw,430px);object-fit:cover;background:transparent}
  .tech-image{background:transparent}
 }
+
+
+/* Editorial multilingual line breaking */
+h1,h2,h3,h4,h5,h6,.display,.heading,.section-head .heading,.story-outro .heading{ text-wrap:balance;hyphens:none;overflow-wrap:normal;word-break:normal }
+p,.body,.rule-row p,.story-content p,.story-specs p,.image-pair p{ text-wrap:pretty;overflow-wrap:normal;word-break:normal;hyphens:auto }
+html:lang(en) p,html:lang(en) .body{hyphens:none}
+html:lang(de) p,html:lang(de) .body{hyphens:auto}
+html:lang(sk) p,html:lang(sk) .body{hyphens:auto}
+.story-content p,.section-head>.body,.story-outro p{max-width:62ch}
+@media(max-width:900px){h1,h2,h3,h4,h5,h6,.display,.heading{overflow-wrap:normal;word-break:normal}.hero-copy .display{max-width:100%}}
