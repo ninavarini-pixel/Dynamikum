@@ -1,0 +1,90 @@
+[
+  {
+    "name": "hero-front",
+    "file": "hero-front.webp",
+    "width": 1624,
+    "height": 892,
+    "source_native_width": 812,
+    "source_native_height": 446
+  },
+  {
+    "name": "vehicle-side",
+    "file": "vehicle-side.webp",
+    "width": 1414,
+    "height": 892,
+    "source_native_width": 707,
+    "source_native_height": 446
+  },
+  {
+    "name": "front-led-detail",
+    "file": "front-led-detail.webp",
+    "width": 634,
+    "height": 480,
+    "source_native_width": 317,
+    "source_native_height": 240
+  },
+  {
+    "name": "interior-seat-detail",
+    "file": "interior-seat-detail.webp",
+    "width": 602,
+    "height": 480,
+    "source_native_width": 301,
+    "source_native_height": 240
+  },
+  {
+    "name": "rear-led-detail",
+    "file": "rear-led-detail.webp",
+    "width": 572,
+    "height": 480,
+    "source_native_width": 286,
+    "source_native_height": 240
+  },
+  {
+    "name": "wheel-mechanism-detail",
+    "file": "wheel-mechanism-detail.webp",
+    "width": 672,
+    "height": 480,
+    "source_native_width": 336,
+    "source_native_height": 240
+  },
+  {
+    "name": "canopy-glass-detail",
+    "file": "canopy-glass-detail.webp",
+    "width": 536,
+    "height": 480,
+    "source_native_width": 268,
+    "source_native_height": 240
+  },
+  {
+    "name": "technology-cutaway",
+    "file": "technology-cutaway.webp",
+    "width": 1638,
+    "height": 652,
+    "source_native_width": 819,
+    "source_native_height": 326
+  },
+  {
+    "name": "vehicle-rear",
+    "file": "vehicle-rear.webp",
+    "width": 1422,
+    "height": 652,
+    "source_native_width": 711,
+    "source_native_height": 326
+  },
+  {
+    "name": "city-side",
+    "file": "city-side.webp",
+    "width": 892,
+    "height": 402,
+    "source_native_width": 446,
+    "source_native_height": 201
+  },
+  {
+    "name": "hero-studio",
+    "file": "hero-studio.webp",
+    "width": 1200,
+    "height": 790,
+    "source_native_width": 600,
+    "source_native_height": 395
+  }
+]
