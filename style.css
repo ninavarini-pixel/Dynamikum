@@ -427,3 +427,21 @@ html{scroll-padding-top:100px}
  .hero-copy .eyebrow::before,.intro .eyebrow::before{width:16px}
  .body strong{font-weight:600}
 }
+
+/* AWB dark editorial interlude — a single deliberate contrast chapter */
+.vehicle-story .story-engineering--dark{background:#17191a;color:#f4f3ef}
+.story-engineering--dark .heading,.story-engineering--dark h3{color:#f4f3ef}
+.story-engineering--dark .eyebrow{color:#b0b2b2}
+.story-engineering--dark .body,.story-engineering--dark .rule-row p{color:#bfc1c0}
+.story-engineering--dark .body strong,.story-engineering--dark .rule-row p strong{color:#fff}
+.story-engineering--dark .story-cutaway{background:#eaeae7;overflow:hidden}
+.story-engineering--dark .story-cutaway img{object-fit:contain;background:#eaeae7;display:block}
+.story-engineering--dark .story-cutaway figcaption{background:#17191a;color:#a6a8a8;padding:16px 0 0}
+.story-engineering--dark .rule-list{border-top-color:#46494a}
+.story-engineering--dark .rule-row{border-bottom-color:#46494a}
+@media(hover:hover){.story-engineering--dark .rule-row:hover{background:rgba(255,255,255,.035)}}
+@media(max-width:760px){
+ .story-engineering--dark .story-cutaway img{height:clamp(245px,75vw,370px);object-fit:contain}
+ .story-engineering--dark .story-cutaway figcaption{padding-top:13px}
+ .story-engineering--dark .story-rules{margin-top:44px}
+}
