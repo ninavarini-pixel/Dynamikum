@@ -470,3 +470,21 @@ html{scroll-padding-top:100px}
  .home-finale .actions .btn{min-height:48px}
  .partnerships-finale{padding-top:80px;padding-bottom:95px}
 }
+
+/* Team: charcoal editorial section and clearly illustrative portraits */
+.team-night .section-head{margin-bottom:40px}
+.team-portrait-strip{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(12px,2vw,26px);margin-bottom:14px}
+.team-portrait-strip figure{margin:0;min-width:0}
+.team-portrait-strip img{display:block;width:100%;height:clamp(220px,27vw,390px);object-fit:cover;object-position:center 35%;filter:grayscale(1);background:#303233}
+.team-portrait-strip figcaption{padding-top:12px;font-size:10px;letter-spacing:.075em;color:#a6a8a8}
+.team-portrait-note{font-size:11px;line-height:1.7;color:#aaa;margin:0 0 clamp(44px,5vw,75px)}
+.team-night .person{border-top-color:#46494a}
+.team-night .person h3{color:#f4f3ef}
+.team-night .person p,.team-night .fine{color:#b1b4b3}
+@media(max-width:760px){
+ .team-portrait-strip{grid-template-columns:repeat(3,minmax(0,1fr));gap:9px}
+ .team-portrait-strip img{height:clamp(155px,44vw,260px)}
+ .team-portrait-strip figcaption{font-size:8px;line-height:1.5;letter-spacing:.02em}
+ .team-portrait-note{margin-bottom:36px}
+}
+@media(max-width:420px){.team-portrait-strip img{height:155px}}
