@@ -96,3 +96,12 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,te
 @media(max-width:760px){.site-header{min-height:0;padding:19px 6% 8px}.nav{gap:22px;padding-bottom:12px}.site-header>.btn{padding:9px 13px;font-size:11px}.display{font-size:clamp(49px,10.6vw,73px)}.heading{font-size:clamp(35px,8.3vw,52px)}.section{padding:80px 6%}.section-head{display:grid;grid-template-columns:1fr;gap:16px;margin-bottom:36px}.section-head .heading{margin:12px 0 0}.section-head>.body{margin:0;max-width:490px}.hero{display:flex;flex-direction:column;min-height:0}.hero-copy{padding:80px 6% 62px}.hero-visual{min-height:0;height:390px}.intro{grid-template-columns:1fr;gap:22px;padding:85px 6% 50px}.intro .body{max-width:490px}.wide-visual{height:350px}.image-pair{grid-template-columns:1fr;gap:42px}.image-pair img{height:300px}.detail-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}.detail-grid img{height:175px}.tech-image{height:300px}.rule-row{grid-template-columns:1fr;gap:12px;padding:26px 0}.grid4{grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}.stats{grid-template-columns:1fr}.stat{padding:24px 0}.role-overview{gap:18px;padding:32px 0}.role-columns{grid-template-columns:1fr;gap:30px}.contact-card{padding:27px}.footer{padding:45px 6% 25px}.footer-top{margin-bottom:40px}}
 @media(max-width:390px){.grid4,.detail-grid{grid-template-columns:1fr}.detail-grid img{height:230px}.hero-visual{height:310px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+
+/* Full-bleed editorial imagery: no gray letterbox edges */
+.hero-visual,.wide-visual,.image-pair img,.detail-grid img,.tech-image{background:transparent}
+.hero-visual,.wide-visual{overflow:hidden}
+.hero-visual img,.wide-visual img{width:100%;height:100%;object-fit:cover;object-position:center}
+.image-pair img,.detail-grid img{width:100%;object-fit:cover;object-position:center}
+.tech-image{width:100%;object-fit:cover;object-position:center;filter:grayscale(1)}
+/* Preserve readable proportions on all breakpoints while filling the frame */
+@media(max-width:760px){.hero-visual img,.wide-visual img,.image-pair img,.detail-grid img,.tech-image{object-fit:cover}}
