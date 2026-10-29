@@ -105,3 +105,19 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,te
 .tech-image{width:100%;object-fit:cover;object-position:center;filter:grayscale(1)}
 /* Preserve readable proportions on all breakpoints while filling the frame */
 @media(max-width:760px){.hero-visual img,.wide-visual img,.image-pair img,.detail-grid img,.tech-image{object-fit:cover}}
+
+/* Persistent, unobtrusive navigation */
+.site-header{position:sticky;top:0;z-index:1000;background:rgba(255,255,255,.97);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px)}
+html{scroll-padding-top:110px}
+#team,#careers,#technology,#vehicle,#inquiry{scroll-margin-top:115px}
+/* Source images are small concept crops: reduce excessive enlargement.
+   Keep editorial crops, but avoid enormous full-width upscaling. */
+.hero{min-height:0}
+.hero-visual{min-height:0;height:clamp(440px,43vw,620px)}
+.hero-visual img{object-fit:cover}
+.wide-visual{height:clamp(340px,43vw,580px)}
+.image-pair img{height:clamp(260px,25vw,390px)}
+.detail-grid img{height:clamp(150px,17vw,240px)}
+.tech-image{height:clamp(320px,35vw,490px)}
+@media(max-width:760px){.site-header{top:0}.hero-visual{height:330px}.wide-visual{height:300px}.image-pair img{height:270px}.detail-grid img{height:160px}.tech-image{height:280px}html{scroll-padding-top:125px}}
+@media(max-width:390px){.hero-visual{height:270px}.detail-grid img{height:210px}}
