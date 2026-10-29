@@ -121,3 +121,61 @@ html{scroll-padding-top:110px}
 .tech-image{height:clamp(320px,35vw,490px)}
 @media(max-width:760px){.site-header{top:0}.hero-visual{height:330px}.wide-visual{height:300px}.image-pair img{height:270px}.detail-grid img{height:160px}.tech-image{height:280px}html{scroll-padding-top:125px}}
 @media(max-width:390px){.hero-visual{height:270px}.detail-grid img{height:210px}}
+
+/* Editorial refinement — tighter visual language, calmer typography, consistent geometry */
+:root{--ink:#191919;--muted:#626262;--line:#e8e8e8;--soft:#fafafa}
+body{font-size:14px;line-height:1.7}
+.site-header{box-shadow:none;border-bottom:1px solid #eaeaea;background:#fff;backdrop-filter:none;-webkit-backdrop-filter:none}
+.brand{font-weight:600;letter-spacing:.065em}
+.nav a{font-weight:500;color:#777;text-decoration:none!important;transition:color .18s}
+.nav a[aria-current=page]{color:#151515}
+.nav a[aria-current=page]::after{content:"";display:block;height:1px;background:#151515;margin-top:3px}
+.nav a:hover{color:#111}
+.site-header>.btn{border:0;border-bottom:1px solid #111;padding:10px 0;min-height:0;background:transparent;color:#111}
+.site-header>.btn:hover{background:transparent;color:#666;border-color:#666}
+.eyebrow{text-transform:uppercase;letter-spacing:.12em;font-size:10px;font-weight:500;color:#767676}
+.display{letter-spacing:-.065em;line-height:1.02}
+.heading{letter-spacing:-.057em;line-height:1.075}
+.body{font-size:14px;line-height:1.8}
+.section{padding-top:clamp(90px,8vw,130px);padding-bottom:clamp(90px,8vw,130px)}
+.section-head{grid-template-columns:minmax(0,1.15fr) minmax(240px,.65fr);gap:clamp(30px,5vw,90px);align-items:end;margin-bottom:55px}
+.section-head .heading{margin-top:18px;max-width:700px}
+.section-head>.body{margin:0 0 5px;max-width:350px}
+.hero-copy .eyebrow{margin-bottom:2px}
+.hero-copy .display{max-width:570px}
+.hero-copy .body{max-width:360px}
+.intro{align-items:end}
+.intro .display{margin-bottom:0}
+.intro .body{margin-bottom:8px}
+.image-pair{gap:clamp(20px,2.5vw,40px)}
+.image-pair a{min-width:0}
+.image-pair img{transition:none}
+.image-pair a:hover img{filter:none}
+.image-pair h3{font-weight:500;font-size:clamp(20px,2vw,27px);margin-top:22px}
+.image-pair p{color:#777}
+.detail-grid{gap:clamp(12px,1.8vw,25px)}
+.detail-grid figcaption{font-size:11px;color:#737373;letter-spacing:.01em}
+.rule-row{padding:31px 0;align-items:start}
+.rule-row h3{font-size:clamp(22px,2vw,29px);font-weight:400}
+.rule-row p{max-width:510px;color:#666}
+.stat strong{font-weight:400}
+.person{padding:23px 0 29px}
+.person h3{font-size:16px}
+.person p{max-width:230px}
+.role-overview{padding:35px 0}
+.role-overview h3{font-weight:400}
+.role-overview p{line-height:1.75}
+.role-details{max-width:1000px}
+.text-link{font-weight:500;text-decoration-thickness:1px;text-underline-offset:5px}
+.contact-card{padding:36px;border:1px solid var(--line);background:#fff}
+.contact-card:hover{background:#fff;border-color:#a8a8a8}
+.contact-card h3{margin-bottom:13px}
+.contact-card p{font-size:13px;line-height:1.8;max-width:340px}
+.field input,.field select,.field textarea{border:1px solid #d8d8d8}
+.footer{background:#fff}
+.footer-top{margin-bottom:54px}
+.footer nav a{color:#666}
+.footer-bottom{color:#888}
+@media(min-width:1200px){.section-head{grid-template-columns:minmax(0,650px) minmax(0,360px);justify-content:space-between}}
+@media(max-width:1050px){.site-header{display:grid;grid-template-columns:1fr auto;gap:12px 20px}.nav{grid-column:1/-1;grid-row:2;order:initial;display:flex;width:100%;padding:5px 0 9px;overflow-x:auto;scrollbar-width:none}.nav::-webkit-scrollbar{display:none}.site-header>.btn{grid-column:2;grid-row:1;justify-self:end}.brand{grid-column:1;grid-row:1}.section-head{grid-template-columns:minmax(0,1fr) minmax(230px,.75fr)}}
+@media(max-width:760px){.site-header{padding:15px 6% 5px;gap:9px 15px}.nav{gap:24px;padding-bottom:12px}.nav a{font-size:11px}.site-header>.btn{padding:6px 0}.section{padding:77px 6%}.section-head{grid-template-columns:1fr;gap:16px;margin-bottom:34px}.section-head>.body{margin:0;max-width:480px}.intro{padding:78px 6% 45px}.intro .body{margin:0}.image-pair{gap:36px}.image-pair h3{margin-top:17px}.rule-row{padding:26px 0}.footer-top{margin-bottom:35px}.footer-bottom{gap:8px}}
